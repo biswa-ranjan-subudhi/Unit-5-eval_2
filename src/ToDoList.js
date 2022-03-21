@@ -1,6 +1,5 @@
 import React from "react";
 const ToDoList = (props) => {
-    console.log(props);
     return (
         <>
             <li>{props.text.name}</li>

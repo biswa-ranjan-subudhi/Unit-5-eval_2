@@ -38,23 +38,23 @@ function ToDo() {
             })
     }
     const filterHr=()=>{
-        let d1 = Data.filter((emp) => emp.role == "Hr");
+        let d1 = Data.filter((emp) => emp.department == "Hr");
         setData(d1)
     }
     const filterIt=()=>{
-        let d2 = Data.filter((emp) => emp.role == "IT");
+        let d2 = Data.filter((emp) => emp.department == "IT");
         setData(d2)
     }
     const filterFinance=()=>{
-        let d3 = Data.filter((emp) => emp.role == "Finance");
+        let d3 = Data.filter((emp) => emp.department == "Finance");
         setData(d3)
     }
-    const flitermarketing=()=>{
-        let d4 = Data.filter((emp) => emp.role == "Marketing");
+    const filtermarketing=()=>{
+        let d4 = Data.filter((emp) => emp.department == "Marketing");
         setData(d4)
     }
     const filternone=()=>{
-        let d5 = Data.filter((emp) => (emp.role == "Hr" || emp.role=='IT'|| emp.role=='Finance'|| emp.role=='Marketing'));
+        let d5 = Data.filter((emp) => (emp.department == "Hr" || emp.department=='IT'|| emp.department=='Finance'|| emp.department=='Marketing'));
         setData(d5)
     }
     return (
@@ -93,7 +93,7 @@ function ToDo() {
                     </div>
             <div className='filter'>       
                         <button onClick={filternone}>Show All Departments</button>
-                        <button onClick={flitermarketing} >Show Marketing</button>
+                        <button onClick={filtermarketing} >Show Marketing</button>
                         <button onClick={filterHr}>Show Hr</button>
                         <button onClick={filterIt}>Show IT</button>
                         <button onClick={filterFinance}>Show Finance</button>
