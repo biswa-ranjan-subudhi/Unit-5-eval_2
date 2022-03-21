@@ -1,0 +1,30 @@
+.main_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list ul{
+    display: flex;
+    align-items: flex-start!important;
+    width: fit-content;
+    list-style: none;
+    text-align: left;
+    flex-direction: column;
+}
+button{
+   margin-left: 80px;
+   margin-bottom: 20px;
+   padding:  5px 20px;
+   outline: none;
+   border-radius: 10px;
+}
+input{
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    width: 200px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid grey;
+    border-radius: 10px;
+}
