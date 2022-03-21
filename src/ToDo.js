@@ -37,7 +37,26 @@ function ToDo() {
                 return getToDos()
             })
     }
-
+    const filterHr=()=>{
+        let d1 = Data.filter((emp) => emp.role == "Hr");
+        setData(d1)
+    }
+    const filterIt=()=>{
+        let d2 = Data.filter((emp) => emp.role == "IT");
+        setData(d2)
+    }
+    const filterFinance=()=>{
+        let d3 = Data.filter((emp) => emp.role == "Finance");
+        setData(d3)
+    }
+    const flitermarketing=()=>{
+        let d4 = Data.filter((emp) => emp.role == "Marketing");
+        setData(d4)
+    }
+    const filternone=()=>{
+        let d5 = Data.filter((emp) => (emp.role == "Hr" || emp.role=='IT'|| emp.role=='Finance'|| emp.role=='Marketing'));
+        setData(d5)
+    }
     return (
         <>
             <div className='main_div'>
@@ -54,7 +73,7 @@ function ToDo() {
                         setSalary('')
                     addToDos(name, department, gender, role, salary)}
                 }>Add</button><br/>
-                    
+
                     <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Add Employee Name' /><br />
                     <input value={department} onChange={(e) => setDepartment(e.target.value)} placeholder='Add Employee Department' /><br/>
                     <input value={gender} onChange={(e) => setGender(e.target.value)} placeholder='Add Employee Gender' /><br/>
@@ -71,13 +90,19 @@ function ToDo() {
                     })}
                    
             </ul>
-            </div> 
-
-
+                    </div>
+            <div className='filter'>       
+                        <button onClick={filternone}>Show All Departments</button>
+                        <button onClick={flitermarketing} >Show Marketing</button>
+                        <button onClick={filterHr}>Show Hr</button>
+                        <button onClick={filterIt}>Show IT</button>
+                        <button onClick={filterFinance}>Show Finance</button>
+                        
+</div> 
                 </div>
             </div>
         </>
     )
 
 }
-export { ToDo}
+export { ToDo }
